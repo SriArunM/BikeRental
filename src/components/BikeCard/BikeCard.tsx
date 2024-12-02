@@ -99,7 +99,7 @@ const BikeCard: FC<BikeCardProps> = ({
       <div className='bg-black text-white p-4 grid grid-cols-2 items-center'>
         <div>
           <p className='text-gray-400 text-xs'>Hourly Price</p>
-          <p className='text-2xl font-bold'>${price}</p>
+          <p className='text-2xl font-bold'>Rupees {price * 10}</p>
           <p className='text-blue-600 text-sm'>Price can be changed</p>
         </div>
         <Link

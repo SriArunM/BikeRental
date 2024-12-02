@@ -64,14 +64,14 @@ const BikeDetails = () => {
         </div>
         <div className='order-1 '>
           <div className='space-y-4'>
-            <h1 className='text-3xl md:text-4xl font-bold text-orange-600'>
+            <h1 className='text-3xl md:text-4xl font-bold text-blue-600'>
               {bike.name}
             </h1>
             <p className='text-muted-foreground text-lg'>{bike.description}</p>
             <div className='grid grid-cols-2 gap-4'>
               <div>
                 <p className='text-muted-foreground'>Price per Hour</p>
-                <p className='text-2xl font-bold text-orange-600'>
+                <p className='text-2xl font-bold text-blue-600'>
                   {new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD',
@@ -80,31 +80,31 @@ const BikeDetails = () => {
               </div>
               <div>
                 <p className='text-muted-foreground'>Availability</p>
-                <p className='text-2xl font-bold text-orange-600'>
+                <p className='text-2xl font-bold text-blue-600'>
                   {bike.isAvailable ? 'Available' : 'Not Available'}
                 </p>
               </div>
               <div>
                 <p className='text-muted-foreground'>Engine Capacity</p>
-                <p className='text-2xl font-bold text-orange-600'>
+                <p className='text-2xl font-bold text-blue-600'>
                   {bike.cc + ' cc'}{' '}
                 </p>
               </div>
               <div>
                 <p className='text-muted-foreground'>Year</p>
-                <p className='text-2xl font-bold text-orange-600'>
+                <p className='text-2xl font-bold text-blue-600'>
                   {bike.year}
                 </p>
               </div>
               <div>
                 <p className='text-muted-foreground'>Model</p>
-                <p className='text-2xl font-bold text-orange-600'>
+                <p className='text-2xl font-bold text-blue-600'>
                   {bike.model}
                 </p>
               </div>
               <div>
                 <p className='text-muted-foreground'>Brand</p>
-                <p className='text-2xl font-bold text-orange-600'>
+                <p className='text-2xl font-bold text-blue-600'>
                   {bike.brand}
                 </p>
               </div>
@@ -114,20 +114,20 @@ const BikeDetails = () => {
                 bike.isAvailable ? (
                   <Button
                     size='lg'
-                    variant='orangeBtn'
+                    variant='redBtn'
                     onClick={() => setIsModalOpen(true)}
                   >
                     Book Now
                   </Button>
                 ) : (
-                  <Button size='lg' variant='orangeBtn' disabled>
+                  <Button size='lg' variant='redBtn' disabled>
                     Bike is not available
                   </Button>
                 )
               ) : (
                 <Button
                   size='lg'
-                  variant='orangeBtn'
+                  variant='redBtn'
                   onClick={() => navigate('/signIn')}
                 >
                   Login to Rent
